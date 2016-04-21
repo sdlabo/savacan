@@ -1,5 +1,5 @@
 <?php
-
+// 30 7 * * * php /home/saru/tools/check_lives.php
 function savacan_mail($body){
   mail("saru@inf.shizuoka.ac.jp", "[重要] エラー報告: $body", $body, "From: saru@aurum.cs.inf.shizuoka.ac.jp");
 }
