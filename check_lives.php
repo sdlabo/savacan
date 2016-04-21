@@ -1,7 +1,7 @@
 <?php
 
 function savacan_mail($body){
-  mail("saru@inf.shizuoka.ac.jp", "[重要] エラー報告 from Life Checker", $body, "From: saru@aurum.cs.inf.shizuoka.ac.jp");
+  mail("saru@inf.shizuoka.ac.jp", "[重要] エラー報告: $body", $body, "From: saru@aurum.cs.inf.shizuoka.ac.jp");
 }
 
 function savacan_ping($host)
@@ -34,5 +34,8 @@ if(savacan_connect("202.228.252.200", 10022) === TRUE){
   savacan_mail("battleshipが落ちているようです。");
 }
 
+if(savacan_connect("133.70.169.129", 10022) === TRUE){
+  savacan_mail("marmorが落ちているようです。");
+}
 
 ?>
